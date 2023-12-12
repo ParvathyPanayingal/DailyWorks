@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestEx", "RestEx\RestEx.csproj", "{07B4A167-8000-499A-A841-B1BC02E25F4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestEx", "RestEx\RestEx.csproj", "{07B4A167-8000-499A-A841-B1BC02E25F4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestExNUnit", "RestExNUnit\RestExNUnit.csproj", "{F777D10B-A18A-4D07-8192-3F199AAB6D57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{07B4A167-8000-499A-A841-B1BC02E25F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07B4A167-8000-499A-A841-B1BC02E25F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07B4A167-8000-499A-A841-B1BC02E25F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F777D10B-A18A-4D07-8192-3F199AAB6D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F777D10B-A18A-4D07-8192-3F199AAB6D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F777D10B-A18A-4D07-8192-3F199AAB6D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F777D10B-A18A-4D07-8192-3F199AAB6D57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

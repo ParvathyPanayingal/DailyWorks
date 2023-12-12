@@ -16,3 +16,21 @@ D:\Training handson\API\RestSharp\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.pd
 D:\Training handson\API\RestSharp\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.genruntimeconfig.cache
 D:\Training handson\API\RestSharp\RestSharpApi\RestEx\obj\Debug\net7.0\ref\RestEx.dll
 D:\Training handson\API\RestSharp\RestSharpApi\RestEx\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\DailyWorks\RestSharpApi\RestEx\bin\Debug\net7.0\RestEx.exe
+D:\DailyWorks\RestSharpApi\RestEx\bin\Debug\net7.0\RestEx.deps.json
+D:\DailyWorks\RestSharpApi\RestEx\bin\Debug\net7.0\RestEx.runtimeconfig.json
+D:\DailyWorks\RestSharpApi\RestEx\bin\Debug\net7.0\RestEx.dll
+D:\DailyWorks\RestSharpApi\RestEx\bin\Debug\net7.0\RestEx.pdb
+D:\DailyWorks\RestSharpApi\RestEx\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\DailyWorks\RestSharpApi\RestEx\bin\Debug\net7.0\RestSharp.dll
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.csproj.AssemblyReference.cache
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.GeneratedMSBuildEditorConfig.editorconfig
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.AssemblyInfoInputs.cache
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.AssemblyInfo.cs
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.csproj.CoreCompileInputs.cache
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.csproj.CopyComplete
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.dll
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\refint\RestEx.dll
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.pdb
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\RestEx.genruntimeconfig.cache
+D:\DailyWorks\RestSharpApi\RestEx\obj\Debug\net7.0\ref\RestEx.dll

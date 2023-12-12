@@ -1,8 +1,20 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using RestEx;
 using RestSharp;
 
-string baseUrl = "https://reqres.in/api/";
-var client = new RestClient(baseUrl);
+
+APIwithExcp api=new APIwithExcp();
+api.GetSingleUser();
+
+
+
+
+
+
+
+//string baseUrl = "https://reqres.in/api/";
+//var client = new RestClient(baseUrl);
 
 /*
 //GET
@@ -93,70 +105,73 @@ else
 //*****************************************************************
 //Modularized code
 
-GetAllUsers(client);
-CreateUser(client);
-UpdateUser(client);
-DeleteUser(client);
-GetSingleUser(client);
+//GetAllUsers(client);
+//CreateUser(client);
+//UpdateUser(client);
+//DeleteUser(client);
+//GetSingleUser(client);
 
 //GET All Users
-static void GetAllUsers(RestClient client)
-{
-    var getUserRequest = new RestRequest("users", Method.Get);
-    getUserRequest.AddQueryParameter("page", "2"); //Adding Query Parameter
+//static void GetAllUsers(RestClient client)
+//{
+//    var getUserRequest = new RestRequest("users", Method.Get);
+//    getUserRequest.AddQueryParameter("page", "2"); //Adding Query Parameter
 
-    var getUserResponse = client.Execute(getUserRequest);
-    Console.WriteLine("GET Response: \n" + getUserResponse.Content);
-}
+//    var getUserResponse = client.Execute(getUserRequest);
+//    Console.WriteLine("GET Response: \n" + getUserResponse.Content);
+//}
 
-//POST
-static void CreateUser(RestClient client)
-{
-    var createUserRequest = new RestRequest("users", Method.Post);
-    createUserRequest.AddHeader("Content-Type", "application/json");
-    createUserRequest.AddJsonBody(new { name = "John Doe", job = "Sofware Developer" });
+////POST
+//static void CreateUser(RestClient client)
+//{
+//    var createUserRequest = new RestRequest("users", Method.Post);
+//    createUserRequest.AddHeader("Content-Type", "application/json");
+//    createUserRequest.AddJsonBody(new { name = "John Doe", job = "Sofware Developer" });
 
-    var createUserResponse = client.Execute(createUserRequest);
-    Console.WriteLine("POST Response: \n" + createUserResponse.Content);
-}
+//    var createUserResponse = client.Execute(createUserRequest);
+//    Console.WriteLine("POST Response: \n" + createUserResponse.Content);
+//}
 
-//PUT
-static void UpdateUser(RestClient client)
-{
-    var updateUserRequest = new RestRequest("users/2", Method.Put);
-    updateUserRequest.AddHeader("Content-Type", "application/json");
-    updateUserRequest.AddJsonBody(new { name = "Updated John Doe", job = "Senior Sofware Developer" });
+////PUT
+//static void UpdateUser(RestClient client)
+//{
+//    var updateUserRequest = new RestRequest("users/2", Method.Put);
+//    updateUserRequest.AddHeader("Content-Type", "application/json");
+//    updateUserRequest.AddJsonBody(new { name = "Updated John Doe", job = "Senior Sofware Developer" });
 
-    var updateUserResponse = client.Execute(updateUserRequest);
-    Console.WriteLine("PUT Response: \n" + updateUserResponse.Content);
-}
+//    var updateUserResponse = client.Execute(updateUserRequest);
+//    Console.WriteLine("PUT Response: \n" + updateUserResponse.Content);
+//}
 
-//DELETE
-static void DeleteUser(RestClient client)
-{
-    var deleteUserRequest = new RestRequest("users/2", Method.Delete);
-    var deleteUserResponse = client.Execute(deleteUserRequest);
-    Console.WriteLine("DELETE Response: \n" + deleteUserResponse.Content);
-}
+////DELETE
+//static void DeleteUser(RestClient client)
+//{
+//    var deleteUserRequest = new RestRequest("users/2", Method.Delete);
+//    var deleteUserResponse = client.Execute(deleteUserRequest);
+//    Console.WriteLine("DELETE Response: \n" + deleteUserResponse.Content);
+//}
 
 //GET Single User
-static void GetSingleUser(RestClient client)
-{
-    var getUserRequest = new RestRequest("users/5", Method.Get);
+//static void GetSingleUser(RestClient client)
+//{
+//    var getUserRequest = new RestRequest("users/2", Method.Get);
 
-    var getUserResponse = client.Execute(getUserRequest);
-    if (getUserResponse.StatusCode == System.Net.HttpStatusCode.OK)
-    {
-        //Parse Json response content
-        JObject? userJson = JObject.Parse(getUserResponse.Content);
+//    var getUserResponse = client.Execute(getUserRequest);
+//    if (getUserResponse.StatusCode == System.Net.HttpStatusCode.OK)
+//    {
+//        //Deserialize JSON response content into c# object
+//        var response=JsonConvert.DeserializeObject<UserDataResponse>(getUserResponse.Content);
 
-        string? userFirstName = userJson["data"]["first_name"].ToString();
-        string? userLastName = userJson["data"]["last_name"].ToString();
+//        UserData? user = response?.Data;
 
-        Console.WriteLine($"User Name: {userFirstName} {userLastName}");
-    }
-    else
-    {
-        Console.WriteLine($"Error: {getUserResponse.ErrorMessage}");
-    }
-}
+//        //Acess properties of the deserialization object
+//        Console.WriteLine($"User ID: {user?.Id}");
+//        Console.WriteLine($"User Email: {user?.Email}");
+//        Console.WriteLine($"User Name: {user?.FirstName} {user?.LastName}");
+//        Console.WriteLine($"User Avatar: {user?.Avatar}");
+//    }
+//    else
+//    {
+//        Console.WriteLine($"Error: {getUserResponse.ErrorMessage}");
+//    }
+//}
