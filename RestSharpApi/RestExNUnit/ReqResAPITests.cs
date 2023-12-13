@@ -86,7 +86,6 @@ namespace RestExNUnit
 
             Assert.That(response.StatusCode, Is.EqualTo(System.Net.HttpStatusCode.NoContent));//created will take both 200 and 201
 
-            var user = JsonConvert.DeserializeObject<UserData>(response.Content);
 
         }
 
