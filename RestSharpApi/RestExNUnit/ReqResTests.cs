@@ -17,12 +17,13 @@ namespace RestExNUnit
     {
         [Test]
         [Order(4)]
-        public void GetSingleUser()
+        [TestCase(2)]
+        public void GetSingleUser(int usrid)
         {
             test = extent.CreateTest("Get single user");
             Log.Information("Get single user test started");
 
-            var request = new RestRequest("users/2", Method.Get);
+            var request = new RestRequest("users/"+ usrid, Method.Get);
             var response = client.Execute(request);
             try
             {
@@ -33,7 +34,7 @@ namespace RestExNUnit
 
                 Assert.NotNull(user);
                 Log.Information("User returned");
-                Assert.That(user.Id, Is.EqualTo(2));
+                Assert.That(user.Id, Is.EqualTo(usrid));
                 Log.Information("User id matches with fetch");
                 Assert.IsNotEmpty(user.Email);
                 Log.Information("Email is not empty");
@@ -79,12 +80,13 @@ namespace RestExNUnit
 
         [Test]
         [Order(1)]
+        [TestCase(2)]
 
-        public void UpdateUser()
+        public void UpdateUser(int usrid)
         {
             test = extent.CreateTest("Update user");
             Log.Information("Update user test started");
-            var request = new RestRequest("users/2", Method.Put);
+            var request = new RestRequest("users/"+ usrid, Method.Put);
             request.AddHeader("Content-Type", "application/json");
             request.AddJsonBody(new { name = "Updated John Doe", job = "Senior Software Developer" });
 
@@ -110,12 +112,13 @@ namespace RestExNUnit
 
         [Test]
         [Order(2)]
+        [TestCase(2)]
 
-        public void DeleteUser()
+        public void DeleteUser(int usrid)
         {
             test = extent.CreateTest("Delete user");
             Log.Information("Delete user test started");
-            var request = new RestRequest("users/2", Method.Delete);
+            var request = new RestRequest("users/"+ usrid, Method.Delete);
 
             var response = client.Execute(request);
             try

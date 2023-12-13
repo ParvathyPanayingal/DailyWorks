@@ -49,5 +49,7 @@ namespace RestExNUnit.Utilities
         {
             extent.Flush();
         }
+
+
     }
 }
